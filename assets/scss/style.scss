@@ -1,0 +1,131 @@
+$main-font: 'Roboto', sans-serif;
+$second-font: 'Manrope', sans-serif;
+//'Advent Pro', sans-serif;
+$main-font-weight: 300;
+$main-font-size: 1.5rem;
+
+$first-color: rgba(255, 255, 255, 0.5);
+$second-color: rgba(255, 255, 255, 0.7);
+
+$todos-color: rgba(48, 48, 48, 0.7);
+
+$dark-color: #303030;
+
+// import fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  //!main background gradient
+  background: #cb2d3e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ef473a,
+    #cb2d3e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ef473a,
+    #cb2d3e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  //! end of background gradient
+  font-family: $second-font;
+  font-weight: 200;
+  display: flex;
+  font-size: $main-font-size;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header,
+form {
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: $dark-color;
+  min-height: 16vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.7rem 1rem;
+  font-size: 1.3rem;
+  border: none;
+  background: $first-color;
+  color: $second-color;
+}
+form button {
+  color: $second-color;
+  background: $first-color;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  border-radius: 50%;
+  margin-left: 0.7rem;
+}
+form button:hover {
+  background: $dark-color;
+  color: $second-color;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-list {
+  min-width: 22rem;
+  width: 30vw;
+  list-style: none;
+  /* min-width: 85vw; */
+}
+.todo {
+  margin: 1rem 0.5rem;
+  background: #f0645ac2;
+  color: rgba(255, 255, 255, 0.808);
+  // font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* color: rgb(9, 29, 70); */
+  font-family: $main-font;
+  font-weight: 300;
+  border-radius: 15px;
+  li {
+    flex: 1;
+  }
+}
+
+.trash-btn,
+.complete-btn {
+  background: rgba(48, 48, 48, 0);
+  color: $second-color;
+  border: none;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.trash-btn,
+.complete-btn:hover {
+  background: $second-color;
+  color: $todos-color;
+  border-radius: 25%;
+}
+.todo-input {
+  color: #fff;
+  border-radius: 15px;
+}
+.todo-item {
+  padding-left: 1rem;
+  font-family: $main-font;
+  font-weight: $main-font-weight;
+  color: #fff;
+}

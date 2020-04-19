@@ -1,0 +1,28 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "just todolist",
+  "main": "app.js",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "sass": "^1.26.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/napalmpapalam/todolist.git"
+  },
+  "keywords": [
+    "lol"
+  ],
+  "author": "semen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/napalmpapalam/todolist/issues"
+  },
+  "homepage": "https://github.com/napalmpapalam/todolist#readme"
+}
