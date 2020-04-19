@@ -73,8 +73,8 @@ form button {
   margin-left: 0.7rem;
 }
 form button:hover {
-  background: $dark-color;
-  color: $second-color;
+  background: #d1313d;
+  color: $dark-color;
 }
 .todo-container {
   display: flex;
@@ -115,7 +115,8 @@ form button:hover {
 }
 .trash-btn,
 .complete-btn:hover {
-  background: $second-color;
+  // background: $second-color;
+  background: #d1313d;
   color: $todos-color;
   border-radius: 25%;
 }
@@ -128,4 +129,5 @@ form button:hover {
   font-family: $main-font;
   font-weight: $main-font-weight;
   color: #fff;
+  max-width: 22rem;
 }
