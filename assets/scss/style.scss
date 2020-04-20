@@ -42,7 +42,7 @@ body {
 
 header,
 form {
-  margin-top: 2rem;
+  margin: 2rem 0 0 0;
   font-size: 2rem;
   color: $dark-color;
   min-height: 4rem;
@@ -55,19 +55,20 @@ form input,
 form button {
   outline: none;
   border: none;
-  padding: 0.6rem 1rem;
-  font-size: 1.4rem;
+  padding: 0.7rem 0.5rem;
+  font-size: 1.3rem;
   background: $first-color;
-  margin: 1rem 0;
+  margin: 1rem;
 }
 
 form button {
+  padding: 0.7rem 1rem;
   color: $second-color;
   background: $first-color;
   cursor: pointer;
   transition: all 0.5s ease;
   border-radius: 50%;
-  margin-left: 0.7rem;
+  margin-left: 0;
 }
 
 form button:hover {
@@ -96,6 +97,8 @@ form button:hover {
   border-radius: 1rem;
   font-size: 1.2rem;
   overflow: hidden;
+  transition: all 1s ease;
+
   li {
     flex: 1;
   }
@@ -123,12 +126,13 @@ form button:hover {
   padding: 0.6rem 1rem;
   cursor: pointer;
   font-size: 1.3rem;
+  outline: none;
+  border-radius: 1rem;
 }
 
 .complete-btn:hover {
   background: #ef473a;
   color: $todos-color;
-  border-radius: 1rem;
 }
 
 .trash-btn:hover {
@@ -146,11 +150,27 @@ form button:hover {
   background: $first-color;
   padding: 0.5rem 1rem;
   border-radius: 15px;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .fa-exclamation-triangle {
   color: #cc1c24;
   font-size: 1.4rem;
   margin: 0.5rem 0rem;
+}
+
+.fa-trash-alt,
+.fa-square,
+.fa-check-square {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(50deg);
+  opacity: 0;
 }
