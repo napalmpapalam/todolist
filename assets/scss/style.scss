@@ -1,20 +1,15 @@
+// import fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
+
 $main-font: 'Roboto', sans-serif;
-$second-font: 'Manrope', sans-serif;
-//'Advent Pro', sans-serif;
+$title-font: 'Manrope', sans-serif;
 $main-font-weight: 300;
 $main-font-size: 1.5rem;
-
-$first-color: rgba(255, 255, 255, 0.5);
+$first-color: rgba(255, 255, 255, 0.2);
 $second-color: rgba(255, 255, 255, 0.7);
-
 $todos-color: rgba(48, 48, 48, 0.7);
-
 $dark-color: #303030;
-
-// import fonts
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap');
 
 * {
   margin: 0;
@@ -36,7 +31,7 @@ body {
     #cb2d3e
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   //! end of background gradient
-  font-family: $second-font;
+  font-family: $title-font;
   font-weight: 200;
   display: flex;
   font-size: $main-font-size;
@@ -44,12 +39,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 header,
 form {
   margin-top: 2rem;
   font-size: 2rem;
   color: $dark-color;
-  min-height: 16vh;
+  min-height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,51 +53,65 @@ form {
 
 form input,
 form button {
-  padding: 0.7rem 1rem;
-  font-size: 1.3rem;
+  outline: none;
   border: none;
+  padding: 0.6rem 1rem;
+  font-size: 1.4rem;
   background: $first-color;
-  color: $second-color;
+  margin: 1rem 0;
 }
+
 form button {
   color: $second-color;
   background: $first-color;
   cursor: pointer;
   transition: all 0.5s ease;
-
   border-radius: 50%;
   margin-left: 0.7rem;
 }
+
 form button:hover {
-  background: #d1313d;
+  background: #ef473a;
   color: $dark-color;
 }
+
 .todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .todo-list {
-  min-width: 22rem;
-  width: 30vw;
+  width: 22rem;
   list-style: none;
-  /* min-width: 85vw; */
 }
+
 .todo {
   margin: 1rem 0.5rem;
   background: #f0645ac2;
-  color: rgba(255, 255, 255, 0.808);
-  // font-size: 1.4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* color: rgb(9, 29, 70); */
-  font-family: $main-font;
   font-weight: 300;
-  border-radius: 15px;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  overflow: hidden;
   li {
     flex: 1;
   }
+}
+
+.todo-input {
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 1.5rem;
+}
+
+.todo-item {
+  font-size: 1rem;
+  font-family: $main-font;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  padding-left: 0.2rem;
 }
 
 .trash-btn,
@@ -109,25 +119,38 @@ form button:hover {
   background: rgba(48, 48, 48, 0);
   color: $second-color;
   border: none;
+  transition: all 0.5s ease;
   padding: 0.6rem 1rem;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
-.trash-btn,
+
 .complete-btn:hover {
-  // background: $second-color;
-  background: #d1313d;
+  background: #ef473a;
   color: $todos-color;
-  border-radius: 25%;
+  border-radius: 1rem;
 }
-.todo-input {
-  color: #fff;
-  border-radius: 15px;
+
+.trash-btn:hover {
+  background: #cb2d3e;
+  color: $todos-color;
+  border-radius: 1rem;
 }
-.todo-item {
-  padding-left: 1rem;
+
+.warning-message {
+  color: $dark-color;
   font-family: $main-font;
-  font-weight: $main-font-weight;
-  color: #fff;
-  max-width: 22rem;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: center;
+  background: $first-color;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  transition: all 1s ease;
+}
+
+.fa-exclamation-triangle {
+  color: #cc1c24;
+  font-size: 1.4rem;
+  margin: 0.5rem 0rem;
 }
