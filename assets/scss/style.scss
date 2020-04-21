@@ -19,12 +19,13 @@ $dark-color: #303030;
 
 body {
   //!main background gradient
-  background: #cb2d3e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #ef473a,
-    #cb2d3e
-  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: #cb2d3e; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(
+    linear,
+    left top, right top,
+    from(#ef473a),
+    to(#cb2d3e)
+  );
   background: linear-gradient(
     to right,
     #ef473a,
@@ -33,10 +34,15 @@ body {
   //! end of background gradient
   font-family: $title-font;
   font-weight: 200;
+  display: -webkit-box;
   display: flex;
   font-size: $main-font-size;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -46,8 +52,11 @@ form {
   font-size: 2rem;
   color: $dark-color;
   min-height: 4rem;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -66,6 +75,7 @@ form button {
   color: $second-color;
   background: $first-color;
   cursor: pointer;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   border-radius: 50%;
   margin-left: 0;
@@ -77,8 +87,11 @@ form button:hover {
 }
 
 .todo-container {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
 }
 
@@ -90,16 +103,21 @@ form button:hover {
 .todo {
   margin: 1rem 0.5rem;
   background: #f0645ac2;
+  display: -webkit-box;
   display: flex;
+  -webkit-box-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
   align-items: center;
   font-weight: 300;
   border-radius: 1rem;
   font-size: 1.2rem;
   overflow: hidden;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 
   li {
+    -webkit-box-flex: 1;
     flex: 1;
   }
 }
@@ -122,6 +140,7 @@ form button:hover {
   background: rgba(48, 48, 48, 0);
   color: $second-color;
   border: none;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   padding: 0.6rem 1rem;
   cursor: pointer;
@@ -150,6 +169,7 @@ form button:hover {
   background: $first-color;
   padding: 0.5rem 1rem;
   border-radius: 15px;
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -171,6 +191,7 @@ form button:hover {
 }
 
 .fall {
+  -webkit-transform: translateY(8rem) rotateZ(50deg);
   transform: translateY(8rem) rotateZ(50deg);
   opacity: 0;
 }
