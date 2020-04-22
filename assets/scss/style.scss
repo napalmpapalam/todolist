@@ -22,7 +22,8 @@ body {
   background: #cb2d3e; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(
     linear,
-    left top, right top,
+    left top,
+    right top,
     from(#ef473a),
     to(#cb2d3e)
   );
@@ -69,7 +70,10 @@ form button {
   background: $first-color;
   margin: 1rem;
 }
-
+form input {
+  width: 15rem;
+  margin: 1rem 1rem 0 1rem;
+}
 form button {
   padding: 0.7rem 1rem;
   color: $second-color;
@@ -194,4 +198,42 @@ form button:hover {
   -webkit-transform: translateY(8rem) rotateZ(50deg);
   transform: translateY(8rem) rotateZ(50deg);
   opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #ff9898;
+  background: rgba(185, 185, 185, 0);
+
+  width: 3rem;
+  height: 3rem;
+  font-family: $main-font;
+  border-radius: 50%;
+  display: flex;
+  font-size: 3rem;
+  transition: all 1s ease;
+}
+
+.select {
+  // margin: 0.3rem 0.3rem 0.3rem 0.3rem;
+
+  padding: 0rem;
+  // transition: all 2s ease;
+
+  :hover {
+    transform: translateX(-1.2rem);
+    background: #f7868c;
+    color: $dark-color;
+    width: 9rem;
+    height: 9rem;
+    font-size: 1.5rem;
+    font-family: $main-font;
+    z-index: 4;
+    border: 1rem solid #cb2d3e;
+  }
 }
