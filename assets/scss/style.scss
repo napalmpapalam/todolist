@@ -22,8 +22,7 @@ body {
   background: #cb2d3e; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-gradient(
     linear,
-    left top,
-    right top,
+    left top, right top,
     from(#ef473a),
     to(#cb2d3e)
   );
@@ -214,8 +213,10 @@ select {
   height: 3rem;
   font-family: $main-font;
   border-radius: 50%;
+  display: -webkit-box;
   display: flex;
   font-size: 3rem;
+  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
@@ -226,6 +227,7 @@ select {
   // transition: all 2s ease;
 
   :hover {
+    -webkit-transform: translateX(-1.2rem);
     transform: translateX(-1.2rem);
     background: #f7868c;
     color: $dark-color;
