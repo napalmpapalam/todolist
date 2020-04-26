@@ -42,14 +42,13 @@ form input,
 form button {
   outline: none;
   border: none;
-  padding: 0.7rem 0.5rem;
   font-size: 1.3rem;
   background: rgba(255, 255, 255, 0.2);
-  margin: 1rem; }
+  padding: 0.7rem 0.5rem; }
 
 form input {
   width: 15rem;
-  margin: 1rem 1rem 0 1rem; }
+  margin-right: 0.5rem; }
 
 form button {
   padding: 0.7rem 1rem;
@@ -151,7 +150,7 @@ form button:hover {
 .fa-check-square {
   pointer-events: none; }
 
-.completed {
+.checked {
   text-decoration: line-through;
   opacity: 0.3; }
 
@@ -161,34 +160,24 @@ form button:hover {
   opacity: 0; }
 
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  border: none;
+  padding: 0.2rem;
   cursor: pointer;
-  color: #ff9898;
-  background: rgba(185, 185, 185, 0);
-  width: 3rem;
-  height: 3rem;
-  font-family: "Roboto", sans-serif;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: flex;
-  font-size: 3rem;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease; }
+  border: 0rem solid transparent;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0.7;
+  outline: none;
+  color: #303030; }
 
 .select {
+  margin: 0rem 1rem 1rem 1rem;
+  overflow: hidden;
+  text-align: center;
   padding: 0rem; }
-  .select :hover {
-    -webkit-transform: translateX(-1.2rem);
-    transform: translateX(-1.2rem);
-    background: #f7868c;
-    color: #303030;
-    width: 9rem;
-    height: 9rem;
-    font-size: 1.5rem;
-    font-family: "Roboto", sans-serif;
-    z-index: 4;
-    border: 1rem solid #cb2d3e; }
+  .select :hover::after {
+    background: #000;
+    color: #fff; }
+
+.filter-todo {
+  text-align: center;
+  margin: 0; }
