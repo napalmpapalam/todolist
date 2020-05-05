@@ -92,19 +92,24 @@ function deleteCheck(event) {
 
 function filterTodo(elem) {
   const todos = todoList.childNodes;
-  todos.forEach((todo) => {
+  todos.forEach(function (todo) {
     switch (elem.target.value) {
       case 'all':
         todo.style.display = 'flex';
         break;
       case 'checked':
+        console.log(todo.classList);
         if (todo.classList.contains('checked')) {
           todo.style.display = 'flex';
         } else {
           todo.style.display = 'none';
         }
-      // case 'processing':
+      case 'processing':
+        if (!todo.classList.contains('checked')) {
+          todo.style.display = 'flex';
+        } else {
+          todo.style.display = 'none';
+        }
     }
   });
-  // console.log(todos);
 }
